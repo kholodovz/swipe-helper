@@ -1,0 +1,38 @@
+@keyframes swipe-animation {
+    0% {
+        transform: translateX(0);
+        opacity: 0
+    }
+
+    19% {
+        transform: translateX(0);
+        opacity: 1
+    }
+
+    30% {
+        opacity: 1
+    }
+
+    81% {
+        transform: translateX(-120px);
+        opacity: 0
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 0
+    }
+}
+
+.swiper-mobile-helper {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 72px;
+    height: 77px;
+    background: url(/_s/images/v3/theme/4/res/handswipe.svg);
+    background-size: contain;
+    pointer-events: none;
+    animation: swipe-animation 1.6s ease infinite;
+    will-change: transform,opacity
+}
